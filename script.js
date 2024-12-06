@@ -1,4 +1,16 @@
 // Initialize Firebase
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDLYYqmWwA3H7V42ws54mSpvkX-BaDA0uI",
+    authDomain: "contestsl-f2f85.firebaseapp.com",
+    databaseURL: "https://contestsl-f2f85-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "contestsl-f2f85",
+    storageBucket: "contestsl-f2f85.firebasestorage.app",
+    messagingSenderId: "166587065822",
+    appId: "1:166587065822:web:07ff99f02ce7e9002b694f",
+    measurementId: "G-2DB662QQ5T"
+};
+
 firebase.initializeApp(firebaseConfig);
  
 const database = firebase.database();
