@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Projects - Code Challenge Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="submitted-projects-wrapper">
+        <header class="submissions-header">
+            <a href="index.html" class="back-to-home">← Back to Home</a>
+        </header>
+
+        <div class="submitted-projects-page">
+            <main class="submissions-main">
+                <h1>Submitted Projects</h1>
+                <div class="projects-grid" id="submitted-projects-container">
+                    <!-- Submitted projects will be dynamically loaded here -->
+                    <div class="no-projects-message">
+                        <p>No projects have been submitted yet.</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="firebaseConfig.js"></script>
+    <script src="script.js"></script>
+    <script>
+        window.onload = loadSubmittedProjects;
+    </script>
+</body>
+</html>
