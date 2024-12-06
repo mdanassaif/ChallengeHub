@@ -21,5 +21,5 @@ Participate in an exciting coding challenge that celebrates innovation, technica
 3. Publish your project on GitHub
 4. Submit your project details before the deadline
 
-**Real Prizes will be Given to Real Winners!**
- # ChallengeHub
+## Real Prizes will be Given to Real Winners 😎🎁
+ 
