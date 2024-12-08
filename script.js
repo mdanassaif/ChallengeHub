@@ -57,10 +57,28 @@ document.getElementById('submission-form').addEventListener('submit', function(e
 
 // GitHub URL Validation
 function isValidGitHubUrl(url) {
-    const githubRegex = /^https?:\/\/(www\.)?github\.com\/[a-zA-Z0-9-]+\/[a-zA-Z0-9-]+\/?$/;
-    return githubRegex.test(url);
+    // Regex to match GitHub URLs with various possible formats
+    const githubRegex = /^https?:\/\/(www\.)?github\.com\/([\w-]+)\/([\w.-]+)(?:\/(?:tree|blob|issues|pull|wiki)\/[\w.-]+)?(?:\/?(?:#[\w-]+)?)?$/;
+    
+    // Additional domain checks
+    const allowedDomains = ['github.com', 'www.github.com'];
+    
+    try {
+        // Create URL object to do additional parsing
+        const parsedUrl = new URL(url);
+        
+        // Check if domain is exactly github.com or www.github.com
+        if (!allowedDomains.includes(parsedUrl.hostname)) {
+            return false;
+        }
+        
+        // Validate using regex
+        return githubRegex.test(url);
+    } catch (error) {
+        // Invalid URL format
+        return false;
+    }
 }
-
 // Load and Display Submitted Projects
 function loadSubmittedProjects() {
     const projectsContainer = document.getElementById('submitted-projects-container');
